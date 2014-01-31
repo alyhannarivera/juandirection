@@ -1,0 +1,44 @@
+body {
+	padding-top: 150px;
+	padding-bottom: 20px;
+	background-color: #eee;
+}
+
+.form-fromto {
+	text-align: center;
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.form-fromto .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+.form-fromto .form-control:focus {
+	z-index: 2;
+}
+
+.form-fromto input[type="text"] {
+	width: 350px;
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.form-fromto input[type="password"] {
+	width: 350px;
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.form-fromto button[type="submit"] {
+	width: 350px;
+}
