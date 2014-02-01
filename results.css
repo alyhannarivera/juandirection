@@ -17,10 +17,19 @@ body {
 
 .navbar-fixed-top .navbar-form input[type="text"] {
 	width: 300px;
+	font-size: 16px;
+	position: relative;
+	left: -20px;
 }
 
-.navbar-fixed-top .navbar-form button[type="submit"] {
-	width: 80px;
+.navbar-fixed-top .navbar-form .thumb_up {
+	background: no-repeat url(images/searchbutton.png) 0 0;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	position: relative;
+	top: -5px;
+	left: -20px;
 }
 
 .carousel {
@@ -46,18 +55,17 @@ body {
 	height: 500px;
 }
 
-#lights {
-	background: url(images/cart.png) 0 0 no-repeat;
-	width: 72px;
-	height: 62px;
-	padding: 0;
+.carousel .thumb_up {
+	background: no-repeat url(images/lights3.png) 0 0;
+	width: 125px;
+	height: 207px;
+	border: 0;
 	position: absolute;
-	top: 400px;
-	left: 25px;
+	top: 325px;
 }
 
 .navbar-fixed-bottom {
-	height: 150px;
+	height: 130px;
 	border-top-color: #204977;
 	background-color: #eee;
 }
