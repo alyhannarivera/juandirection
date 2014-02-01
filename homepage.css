@@ -32,13 +32,6 @@ body {
 	border-bottom-right-radius: 0;
 }
 
-.form-fromto input[type="password"] {
-	width: 350px;
-	margin-bottom: 10px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
-
 .form-fromto button[type="submit"] {
 	width: 350px;
 }

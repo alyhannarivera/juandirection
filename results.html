@@ -10,9 +10,106 @@
         
         <!-- Custom styles for this template -->
         <link href="results.css" rel="stylesheet">
+		
+		<script 
+			src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"> 
+		</script>
+		
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+		<script>
+				var autocomplete;
+
+				function initialize() {
+
+				  autocomplete = new google.maps.places.Autocomplete(
+					  /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
+					  { types: ['geocode'] });
+
+				  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+					fillInAddress();
+				  });
+				  
+				  autocomplete2 = new google.maps.places.Autocomplete(
+					  /** @type {HTMLInputElement} */(document.getElementById('autocomplete2')),
+					  { types: ['geocode'] });
+
+				  google.maps.event.addListener(autocomplete2, 'place_changed', function() {
+					fillInAddress2();
+				  });
+  
+				var myLatlng = new google.maps.LatLng(14.5351,120.9822);
+				var myLatlng2 = new google.maps.LatLng(14.5643,120.9937);
+				
+				var mapProp = {
+					center: new google.maps.LatLng(14.55,120.9822),
+					zoom:14,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap1"),mapProp);
+				
+				
+				var marker = new google.maps.Marker({
+					position: myLatlng,
+					map: map,
+					title:"DLSU"
+				});
+				
+				var marker2 = new google.maps.Marker({
+					position: myLatlng2,
+					map: map,
+					title:"MOA"
+				});
+				
+				var flightPlanCoordinates = [
+					myLatlng,
+					myLatlng2,
+					];
+					
+				var flightPath = new google.maps.Polyline({
+				
+				path: flightPlanCoordinates,
+				strokeColor: "#800000",
+				strokeOpacity: 1.0, 
+				strokeWeight: 2
+				
+				});
+				
+				
+				mapProp = {
+					center:new google.maps.LatLng(13,122),
+					zoom:5,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				map=new google.maps.Map(document.getElementById("googleMap2"),mapProp);
+				
+				mapProp = {
+					center:new google.maps.LatLng(13,122),
+					zoom:5,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				map=new google.maps.Map(document.getElementById("googleMap3"),mapProp);
+  
+  
+}
+
+function fillInAddress() {
+		var place = autocomplete.getPlace();
+		document.getElementById(from).value = place;
+  
+}
+
+function fillInAddress2() {
+		var place = autocomplete.getPlace();
+		document.getElementById(from).value = place;
+  
+}
+
+
+    </script>
+		
     </head>
 	
-    <body>
+    <body onload="initialize()">
 		<!-- Header -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
@@ -23,15 +120,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><img src="images\logo3.png" alt=""></a>
+					<a class="navbar-brand" href="homepage.html"><img src="images\logo3.png" alt=""></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<form class="navbar-form navbar-left" role="form">
 						<div class="form-group">
-							<input type="text" placeholder="From" class="form-control"></input>
+							<input type="text" id="autocomplete" placeholder="From" class="form-control"></input>
 						</div>
 						<div class="form-group">
-							<input type="text" placeholder="To" class="form-control"></input>
+							<input type="text" id="autocomplete2" placeholder="To" class="form-control"></input>
 						</div>
 						<button class="thumb_up" title="Search" type="button"></button>
 					</form>
@@ -40,22 +137,22 @@
 		</div>
 			
 		<!-- Body -->
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div id="myCarousel2ousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel2ousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel2ousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel2ousel" data-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="images/justme.jpg" alt="">
+					<div id="googleMap2" style="width:100%;height:100%;"></div>
 					<div class="container">
 						<div class="carousel-caption">
 						</div>
 					</div>
 				</div>
 				<div class="item">
-					<img src="images/levy.jpg" alt="">
+					<div id="googleMap1" style="width:100%;height:100%;"></div>
 					<div class="container">
 						<div class="carousel-caption">
 						</div>
@@ -70,31 +167,43 @@
 				</div>
 			</div>
 			
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			<a class="left carousel-control" href="#myCarousel2ousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a class="right carousel-control" href="#myCarousel2ousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 			<button class="thumb_up" title="Show Traffic" type="button"></button>
 		</div>
 		
 		<!-- Footer -->
 		<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-			<div class="container" align="center">
-				<div id="myCarousel2" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="item active">
-							<p>Manila, Philippines</p>
-							<div class="container">
-								<div class="carousel-caption">
+			<div class="container">
+				<div class="navbar-header">
+					<div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="false">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel2" data-slide-to="1"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="container">
+									<img style="position:relative; top: -25px; left: -25px;" src="images/1.png" alt="" height="92" width="329"></img>
+									<img style="position:relative; top: -15px; left: -55px;" src="images/2.png" alt="" height="104" width="329"></img>
+									<img style="position:relative; top: 4px; left: -55px;" src="images/3.png" alt="" height="143" width="329"></img>
 								</div>
 							</div>
+							<!-- page 2 <div class="item">
+								<div class="container">
+									<img style="position:relative; top: 15px; left: -10px;" src="images/4.png" alt="" height="92" width="329"></img>
+								</div>                                                         
+							</div> -->
 						</div>
+						
+						<a class="left carousel-control" href="#myCarousel2" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a class="right carousel-control" href="#myCarousel2" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
-					
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-					<button class="thumb_up" title="Show Traffic" type="button"></button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<form class="form-total">
+						<img style="position: absolute; left: 1060px;" src="images/total.png" alt=""></img>
+					</form>
 				</div>
 			</div>
 		</div>
