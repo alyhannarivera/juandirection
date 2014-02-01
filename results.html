@@ -14,14 +14,12 @@
 		<script 
 			src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"> 
 		</script>
-		
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 		<script>
-				var autocomplete;
-
-				function initialize() {
-
-				  autocomplete = new google.maps.places.Autocomplete(
+		var autocomplete, autocomplete2;
+			function initialize()
+			{
+				autocomplete = new google.maps.places.Autocomplete(
 					  /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
 					  { types: ['geocode'] });
 
@@ -36,25 +34,27 @@
 				  google.maps.event.addListener(autocomplete2, 'place_changed', function() {
 					fillInAddress2();
 				  });
-  
+				
 				var myLatlng = new google.maps.LatLng(14.5351,120.9822);
 				var myLatlng2 = new google.maps.LatLng(14.5643,120.9937);
+				
+				
+				<!-- first route -->
 				
 				var mapProp = {
 					center: new google.maps.LatLng(14.55,120.9822),
 					zoom:14,
 					mapTypeId:google.maps.MapTypeId.ROADMAP
 				};
-				var map=new google.maps.Map(document.getElementById("googleMap1"),mapProp);
+				var map = new google.maps.Map(document.getElementById("googleMap1"),mapProp);
 				
-				
-				var marker = new google.maps.Marker({
+				var from = new google.maps.Marker({
 					position: myLatlng,
 					map: map,
 					title:"DLSU"
 				});
 				
-				var marker2 = new google.maps.Marker({
+				var to = new google.maps.Marker({
 					position: myLatlng2,
 					map: map,
 					title:"MOA"
@@ -62,50 +62,78 @@
 				
 				var flightPlanCoordinates = [
 					myLatlng,
-					myLatlng2,
-					];
+					new google.maps.LatLng(14.5361,120.9892),
+					new google.maps.LatLng(14.5511,120.9862),
+					new google.maps.LatLng(14.5541,120.9972),
+					myLatlng2];
 					
 				var flightPath = new google.maps.Polyline({
-				
-				path: flightPlanCoordinates,
-				strokeColor: "#800000",
-				strokeOpacity: 1.0, 
-				strokeWeight: 2
-				
+					path: flightPlanCoordinates,
+					strokeColor: "#FF0000",
+					strokeOpacity: 1.0, 
+					strokeWeight: 2
 				});
 				
-				
-				mapProp = {
-					center:new google.maps.LatLng(13,122),
-					zoom:5,
-					mapTypeId:google.maps.MapTypeId.ROADMAP
-				};
-				map=new google.maps.Map(document.getElementById("googleMap2"),mapProp);
-				
-				mapProp = {
-					center:new google.maps.LatLng(13,122),
-					zoom:5,
-					mapTypeId:google.maps.MapTypeId.ROADMAP
-				};
-				map=new google.maps.Map(document.getElementById("googleMap3"),mapProp);
-  
-  
-}
+				flightPath.setMap(map);
 
-function fillInAddress() {
+				
+				
+				<!-- second route -->
+				
+				var myLatlng3 = new google.maps.LatLng(14.5351,120.9822);
+				var myLatlng4 = new google.maps.LatLng(14.5643,120.9937);
+				
+				
+				var mapProp2 = {
+					center: new google.maps.LatLng(14.55,120.9822),
+					zoom:14,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				
+				var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
+				
+				var from2 = new google.maps.Marker({
+					position: myLatlng3,
+					map: map2,
+					title:"DLSU"
+				});
+				
+				var to2 = new google.maps.Marker({
+					position: myLatlng4,
+					map: map2,
+					title:"MOA"
+				});
+				
+				var flightPlanCoordinates2 = [
+					myLatlng3,
+					new google.maps.LatLng(14.5371,121.0003),
+					new google.maps.LatLng(14.5541,120.9972),
+					myLatlng4];
+					
+				var flightPath2 = new google.maps.Polyline({
+					path: flightPlanCoordinates2,
+					strokeColor: "#00FF00",
+					strokeOpacity: 1.0, 
+					strokeWeight: 2
+				});
+				
+				flightPath2.setMap(map2);
+				
+			}
+
+			function fillInAddress() {
 		var place = autocomplete.getPlace();
 		document.getElementById(from).value = place;
   
-}
+		}
 
-function fillInAddress2() {
-		var place = autocomplete.getPlace();
-		document.getElementById(from).value = place;
-  
-}
-
-
-    </script>
+		function fillInAddress2() {
+				var place = autocomplete.getPlace();
+				document.getElementById(from).value = place;
+		  
+		}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 		
     </head>
 	
@@ -125,10 +153,10 @@ function fillInAddress2() {
 				<div class="navbar-collapse collapse">
 					<form class="navbar-form navbar-left" role="form">
 						<div class="form-group">
-							<input type="text" id="autocomplete" placeholder="From" class="form-control"></input>
+							<input type="text"  id="autocomplete" placeholder="From" class="form-control"></input>
 						</div>
 						<div class="form-group">
-							<input type="text" id="autocomplete2" placeholder="To" class="form-control"></input>
+							<input type="text"  id="autocomplete2" placeholder="To" class="form-control"></input>
 						</div>
 						<button class="thumb_up" title="Search" type="button"></button>
 					</form>
@@ -145,14 +173,14 @@ function fillInAddress2() {
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<div id="googleMap2" style="width:100%;height:100%;"></div>
+					<div id="googleMap1" style="width:100%;height:100%;"></div>
 					<div class="container">
 						<div class="carousel-caption">
 						</div>
 					</div>
 				</div>
 				<div class="item">
-					<div id="googleMap1" style="width:100%;height:100%;"></div>
+					<div id="googleMap2" style="width:100%;height:100%;"></div>
 					<div class="container">
 						<div class="carousel-caption">
 						</div>
