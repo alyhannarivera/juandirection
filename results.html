@@ -16,123 +16,59 @@
 		</script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 		<script>
-		var autocomplete, autocomplete2;
-			function initialize()
-			{
-				autocomplete = new google.maps.places.Autocomplete(
-					  /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
-					  { types: ['geocode'] });
 
-				  google.maps.event.addListener(autocomplete, 'place_changed', function() {
-					fillInAddress();
-				  });
-				  
-				  autocomplete2 = new google.maps.places.Autocomplete(
-					  /** @type {HTMLInputElement} */(document.getElementById('autocomplete2')),
-					  { types: ['geocode'] });
+				function initialize() {
+					var mapProp = {
+										center: new google.maps.LatLng(14.55,120.9822),
+										zoom:14,
+										mapTypeId:google.maps.MapTypeId.ROADMAP
+									};
+					var map = new google.maps.Map(document.getElementById("googleMap1"),mapProp);
 
-				  google.maps.event.addListener(autocomplete2, 'place_changed', function() {
-					fillInAddress2();
-				  });
-				
-				var myLatlng = new google.maps.LatLng(14.5351,120.9822);
-				var myLatlng2 = new google.maps.LatLng(14.5643,120.9937);
-				
-				
-				<!-- first route -->
-				
-				var mapProp = {
-					center: new google.maps.LatLng(14.55,120.9822),
-					zoom:14,
-					mapTypeId:google.maps.MapTypeId.ROADMAP
-				};
-				var map = new google.maps.Map(document.getElementById("googleMap1"),mapProp);
-				
-				var from = new google.maps.Marker({
-					position: myLatlng,
-					map: map,
-					title:"DLSU"
-				});
-				
-				var to = new google.maps.Marker({
-					position: myLatlng2,
-					map: map,
-					title:"MOA"
-				});
-				
-				var flightPlanCoordinates = [
-					myLatlng,
-					new google.maps.LatLng(14.5361,120.9892),
-					new google.maps.LatLng(14.5511,120.9862),
-					new google.maps.LatLng(14.5541,120.9972),
-					myLatlng2];
+					var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'));
+					var autocomplete2 = new google.maps.places.Autocomplete(document.getElementById('autocomplete2'));
+
+					//var infowindowFrom = new google.maps.InfoWindow();
+					//var infowindowTo = new google.maps.InfoWindow();
 					
-				var flightPath = new google.maps.Polyline({
-					path: flightPlanCoordinates,
-					strokeColor: "#FF0000",
-					strokeOpacity: 1.0, 
-					strokeWeight: 2
-				});
-				
-				flightPath.setMap(map);
+					var markerFrom = new google.maps.Marker({
+						map: map
+					  });
 
-				
-				
-				<!-- second route -->
-				
-				var myLatlng3 = new google.maps.LatLng(14.5351,120.9822);
-				var myLatlng4 = new google.maps.LatLng(14.5643,120.9937);
-				
-				
-				var mapProp2 = {
-					center: new google.maps.LatLng(14.55,120.9822),
-					zoom:14,
-					mapTypeId:google.maps.MapTypeId.ROADMAP
-				};
-				
-				var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapProp2);
-				
-				var from2 = new google.maps.Marker({
-					position: myLatlng3,
-					map: map2,
-					title:"DLSU"
-				});
-				
-				var to2 = new google.maps.Marker({
-					position: myLatlng4,
-					map: map2,
-					title:"MOA"
-				});
-				
-				var flightPlanCoordinates2 = [
-					myLatlng3,
-					new google.maps.LatLng(14.5371,121.0003),
-					new google.maps.LatLng(14.5541,120.9972),
-					myLatlng4];
+					var markerTo = new google.maps.Marker({
+						map: map
+					 });
+					 
+					  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+						markerFrom.setVisible(false);
+						var place = autocomplete.getPlace();
+						
+						markerFrom.setPosition(place.geometry.location);
+						markerFrom.setVisible(true);
+						
+					//	infowindowFrom.setContent('<div><strong>' + place.name + '</strong>');
+					//	infowindowFrom.open(map, markerFrom);
+					  });
+					  
+					  google.maps.event.addListener(autocomplete2, 'place_changed', function() {
+						markerTo.setVisible(false);
+						var place = autocomplete2.getPlace();
+						
+						markerTo.setPosition(place.geometry.location);
+						markerTo.setVisible(true);
+						
+					//	infowindowTo.setContent('<div><strong>' + place.name + '</strong>');
+					//	infowindowTo.open(map, markerTo);
+					  });
+
+					  
 					
-				var flightPath2 = new google.maps.Polyline({
-					path: flightPlanCoordinates2,
-					strokeColor: "#00FF00",
-					strokeOpacity: 1.0, 
-					strokeWeight: 2
-				});
-				
-				flightPath2.setMap(map2);
-				
-			}
+					  
+				} //end of initialize
 
-			function fillInAddress() {
-		var place = autocomplete.getPlace();
-		document.getElementById(from).value = place;
-  
-		}
+				google.maps.event.addDomListener(window, 'load', initialize);
 
-		function fillInAddress2() {
-				var place = autocomplete.getPlace();
-				document.getElementById(from).value = place;
-		  
-		}
-			google.maps.event.addDomListener(window, 'load', initialize);
+				
 		</script>
 		
     </head>
