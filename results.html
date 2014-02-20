@@ -10,11 +10,62 @@
         
         <!-- Custom styles for this template -->
         <link href="results.css" rel="stylesheet">
+    </head>
+	
+    <body onload="initialize()">
+		<!-- Header -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images\logo3.png" alt=""></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<form class="navbar-form navbar-left" role="form">
+						<div class="form-group">
+							<input type="text"  id="autocomplete" placeholder="From" class="form-control"></input>
+						</div>
+						<div class="form-group">
+							<input type="text"  id="autocomplete2" placeholder="To" class="form-control"></input>
+						</div>
+						<button class="thumb_up" title="Search" type="button"></button>
+					</form>
+				</div>
+			</div>
+		</div>
 		
-		<script 
+
+		<!-- Side -->
+		<div class="sideNav" role="navigation">
+			<div class="container">
+				<p> halloooooo!!!!! i am a p tag!!!!! </p>
+				<div class="form">
+					<img src="images/erza.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Body -->
+		<div class="map">
+			
+					<div id="googleMap1" style="width:100%;height:100%;"></div>
+					
+			<button class="thumb_up" title="Show Traffic" type="button"></button>
+		</div>
+
+    </body>
+	
+	
+	<script 
 			src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"> 
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 		<script>
 
 				function initialize() {
@@ -70,82 +121,6 @@
 
 				
 		</script>
-		
-    </head>
-	
-    <body onload="initialize()">
-		<!-- Header -->
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html"><img src="images\logo3.png" alt=""></a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<form class="navbar-form navbar-left" role="form">
-						<div class="form-group">
-							<input type="text"  id="autocomplete" placeholder="From" class="form-control"></input>
-						</div>
-						<div class="form-group">
-							<input type="text"  id="autocomplete2" placeholder="To" class="form-control"></input>
-						</div>
-						<button class="thumb_up" title="Search" type="button"></button>
-					</form>
-				</div>
-			</div>
-		</div>
-		
-
-		<!-- Side -->
-		<div class="sideNav" role="navigation">
-			<div class="container">
-			</div>
-		</div>
-		
-
-		<!-- Body -->
-		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active">
-					<div id="googleMap1" style="width:100%;height:100%;"></div>
-					<div class="container">
-						<div class="carousel-caption">
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div id="googleMap2" style="width:100%;height:100%;"></div>
-					<div class="container">
-						<div class="carousel-caption">
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="images/erza.jpg" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			<button class="thumb_up" title="Show Traffic" type="button"></button>
-		</div>
-
-    </body>
-	
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="../../docs-assets/js/holder.js"></script>

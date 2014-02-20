@@ -1,14 +1,14 @@
 body {
 	padding-top: 50px;
-	padding-left: 245px;
+	padding-left: 320px;
 	background-color: #204977;
 }
 
 .navbar-fixed-top {
 	background-color: #eee;
 	height: 50px;
-	margin-left: -180px;
 	text-align: left;
+	border: 0;
 }
 
 .navbar-fixed-top .navbar-header {
@@ -17,6 +17,7 @@ body {
 
 .navbar-fixed-top .navbar-header .navbar-brand {
 	padding-top: 5px;
+	padding-left: 0;
 }
 
 .navbar-fixed-top .navbar-form input[type="text"] {
@@ -31,52 +32,48 @@ body {
 	height: 30px;
 	border: 0;
 	position: relative;
-	top: -5px;
 }
 
-.sideNav
-{
-    padding: 10px 0;
+.sideNav {
+	padding: 10px 0;
     position: fixed;
     left: 0px;
-    top: 40px;
+    right: 75%;
+    top: 50px;
     bottom: 0px;
-    width: 245px;
-    background-color: #f1f1f1;
-    border-right: 1px solid #bbc0c4;
+    background-color: #eee;
+    border: 0;
     text-align:left;
     font-size:11px;
     font-weight:bold;
 }
 
-.carousel {
-	width: 1125px;
-	height: 625px;
-	position: relative;
-}
-
-.carousel-caption {
-	z-index: 10;
-}
-
-.carousel .item {
-	height: 500px;
-	background-color: #204977;
-}
-
-.carousel-inner > .item > img {
+.sideNav .container .form {
+	background-color: blue;
+	
 	position: absolute;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	height: 500px;
+	left: 5%;
+	right: 5%;
+	top: 10%;
+	bottom: 30%;
+	overflow: auto;
+	
 }
 
-.carousel .thumb_up {
+.map {
+	position: absolute;
+	left: 25%;
+	right: 0;
+	top: 50px;
+	bottom: 0;
+	background-color: #eee;
+}
+
+.map .thumb_up {
 	background: no-repeat url(images/lights3.png) 0 0;
 	width: 125px;
 	height: 207px;
 	border: 0;
 	position: absolute;
-	top: 400px;
+	bottom: 0;
 }
