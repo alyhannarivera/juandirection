@@ -1,13 +1,23 @@
 body {
-	padding-bottom: 20px;
-	background-color: #eee;
+	background-color: #bdbbbb;
 }
 
 .container {
 	text-align: center;
 }
 
+.wallpaper {
+	width: 100%;
+	position: relative;
+}
+
+.form-group {
+	padding-top: 0.5%;
+	position: relative;
+}
+
 .form-fromto {
+	position: relative;
 	text-align: center;
 	max-height: 330px;
 	padding: 0;
@@ -19,7 +29,7 @@ body {
 	display: inline-block;
 	font-size: 16px;
 	width: auto;
-	padding: 10px;
+	padding: 5px;
 	-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 			box-sizing: border-box;
@@ -39,4 +49,31 @@ body {
 	height: 30px;
 	border: 0;
 	position: relative;
+}
+
+.marketing {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.marketing .col-lg-4 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.marketing h2 {
+	font-weight: normal;
+}
+.marketing .col-lg-4 p {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.featurette-divider {
+  margin: 10px 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }

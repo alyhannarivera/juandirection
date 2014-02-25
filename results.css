@@ -5,7 +5,7 @@ body {
 }
 
 .navbar-fixed-top {
-	background-color: #eee;
+	background-color: #bdbbbb;
 	height: 50px;
 	text-align: left;
 	border: 0;
@@ -38,18 +38,18 @@ body {
 	padding: 10px 0;
     position: fixed;
     left: 0px;
-    right: 75%;
+    right: 76%;
     top: 50px;
     bottom: 0px;
-    background-color: #eee;
+    background-color: #bdbbbb;
     border: 0;
     text-align:left;
     font-size:11px;
     font-weight:bold;
 }
 
-.sideNav .container .form {
-	background-color: blue;
+.sideNav .container .directions {
+	background-color: #bdbbbb;
 	
 	position: absolute;
 	left: 5%;
@@ -60,9 +60,20 @@ body {
 	
 }
 
+.sideNav .container .total {
+	background-color: #bdbbbb;
+	
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 71%;
+	overflow: auto;
+	
+}
+
 .map {
 	position: absolute;
-	left: 25%;
+	left: 24%;
 	right: 0;
 	top: 50px;
 	bottom: 0;
