@@ -20,6 +20,16 @@
 		</style>
 		<script src="scripts/jquery-1.11.0.js" type="text/javascript"></script>
 			
+		<link rel="stylesheet" href="dist/leaflet-routing-machine.css" />
+		<script src="dist/leaflet-routing-machine.min.js"></script>
+		
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+		<script src="dist/src/L.Routing.OSRM.js"></script>
+		<script src="dist/src/L.Routing.Line.js"></script>
+		<script src="dist/src/L.Routing.Itinerary.js"></script>
+		<script src="dist/src/L.Routing.Plan.js"></script>
+		<script src="dist/src/L.Routing.Control.js"></script>
+		<script src="dist/Control.Geocoder.js"></script>
 		
 		
     </head>
@@ -100,23 +110,25 @@
 							attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 						}).addTo(map);
 						**/
-						L.marker([source.geometry.location.lat(),source.geometry.location.lng()]).addTo(map)
-						.bindPopup('My Current Location')
-						.openPopup();
+						map.remove();
+						map = L.map('map');
+						L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+							attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+						}).addTo(map);
 						
-						L.marker([destination.geometry.location.lat(),destination.geometry.location.lng()]).addTo(map)
-						.bindPopup('My Destination')
-						.openPopup();
+						L.Routing.control({
+							waypoints: [
+								L.latLng(source.geometry.location.lat(),source.geometry.location.lng()),
+								L.latLng(destination.geometry.location.lat(),destination.geometry.location.lng())
+							],
+							geocoder: L.Control.Geocoder.nominatim()
+						}).addTo(map);
 						
-						
-						var points = new Array();
-						points[0] = [source.geometry.location.lat(),source.geometry.location.lng()];
-						points[1] = [destination.geometry.location.lat(),destination.geometry.location.lng()];
-						L.polyline(points,{color: 'red'}).addTo(map);
 					});
 				});
 				
 				function initialize() {
+				
 				
 					
 
