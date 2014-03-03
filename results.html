@@ -126,6 +126,11 @@
 					attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 				}).addTo(map);
 				
+				// set the inputs with value from localStorage
+				$('#autocomplete').val(localStorage["from"]);
+				$('#autocomplete2').val(localStorage["to"]);
+			
+				
 				/**
 				var mapProp = {
 					center: new google.maps.LatLng(14.55,120.9822),
@@ -164,6 +169,7 @@
 
 				**/
 						
+
 						  
 			} //end of initialize
 

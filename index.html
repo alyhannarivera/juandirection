@@ -25,9 +25,9 @@
 				<input type="text" class="form-control" id="autocomplete" placeholder="From" required autofocus></input>
 				<input type="text" class="form-control" id="autocomplete2" placeholder="To" required></input>
 				
-				<a href="results.html">
-					<button class="thumb_up" title="Search" type="button"></button>
-				</a>
+				
+					<button class="thumb_up" title="Search" type="button" onclick = "storeFromAndTo()"></button>
+				
             </form>
         </div>
 		
@@ -118,7 +118,17 @@
 			}
 			
 			inintialize();
+			
+			// using localStorage to store the data in the browser... lasts forever....
+			function storeFromAndTo(){
+			window.location.href = "results.html";
+			localStorage["from"] = document.getElementById("autocomplete").value;
+			localStorage["to"] = document.getElementById("autocomplete2").value;
+
+		}
 		</script>
+		
+		
 	
     </body>
 </html>
