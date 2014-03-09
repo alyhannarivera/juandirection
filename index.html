@@ -14,101 +14,185 @@
     </head>
 	
     <body onload="initialize()">
-			<div class="wallpaper">
-				<img src="images\valueprop.png" alt="" width=100%></img>
-			</div>
-        <div class="container">
-			<div class="form-group">
-				<img src="images\juandirection-tagline.png" alt="" width="45%"></img>
-			</div>
-            <form class="form-fromto" role="form">
-				<input type="text" class="form-control" id="autocomplete" placeholder="From" required autofocus></input>
-				<input type="text" class="form-control" id="autocomplete2" placeholder="To" required></input>
-				
-				
+	
+		<div id="wallpaper"></div>
+		<div id="rail"></div>
+		<div id="horizontalroad"></div>
+		<div id="trafficpost"></div>
+		<div id="train"></div>
+		<div id="jeepney"></div>
+		<div id="bus"></div>
+		<div id="time"></div>
+		<div id="money"></div>
+		<div id="direction"></div>
+		<div id="head">
+			<div class="container">
+				<div class="form-group">
+					<img src="images\juandirection-tagline.png" alt="" width="100%"></img>
+				</div>
+				<form class="form-fromto" role="form">
+					<input type="text" class="form-control" id="autocomplete" placeholder="From" required autofocus></input>
+					<input type="text" class="form-control" id="autocomplete2" placeholder="To" required></input>
+					
 					<button class="thumb_up" title="Search" type="button" onclick = "storeFromAndTo()"></button>
-				
-            </form>
-        </div>
-		
-		<div class="container marketing">
-			<div class="row">
-				<div class="col-lg-4">
-					<h2><img src="images\check.png" alt="" width="10%">Less Commuting Time</h2>
-					<p>JuanDirection will take you home faster with the provided estimated commuting time. The given estimated commuting time does not only depend on the distance that will be travelled but traffic will also be used as a basis.</p>
-				</div>
-				<div class="col-lg-4">
-					<h2><img src="images\check.png" alt="" width="10%">Less Fare</h2>
-					<p>JuanDirection will give you one way or another which can help you choose the cheapest way. An estimated fare for your journey is provided together with the estimated commuting time.</p>
-				</div>
-				<div class="col-lg-4">
-					<h2><img src="images\check.png" alt="" width="10%">Less Confusions</h2>
-					<p>JuanDirection will help you enjoy the best song ever while commuting. The detailed and comprehensive directions are what we will provide. So worry no more cause will guide you to the Metro.</p>
+				</form>
+			</div>
+		</div>
+		<div id="details">
+			<div id="description">
+				<div class="container">
+					<h2 class="featurette-heading"> We give ways! </br>
+						JuanDirection is a web application that will give you directions for commuting in the Metro.</br>
+						We will give you ways that might keep you in time.</br>
+						We will give you ways wherein you might save money.</br>
+						We will give you ways to help you prevent getting lost.</br>
+					</h2>
 				</div>
 			</div>
-		
-			<hr class="featurette-divider">
-
-			<div class="row featurette">
+			<div id="benefit1" class="row featurette1">
 				<div class="col-md-7">
-					<h2 class="featurette-heading">Rivera, Kevin. <span class="text-muted">Project Manager.</span></h2>
-					<p class="lead"></p>
+					<h2 class="featurette-heading">Less Commuting Time. <span class="text-muted">More Time for Others. </span></h2>
+					<p class="lead">
+						JuanDirection will TAKE YOU HOME faster with the provided estimated commuting time. The given estimated commuting time does not 
+						only depend on the distance that will be travelled but traffic will also be used as a basis.
+					</p>
 				</div>
 				<div class="col-md-5">
-					<img src="images\kevin.jpg" alt="Generic placeholder image" height="200px">
+					<img src="images\benefit.jpg" alt="Generic placeholder image" width="80%">
+					<button id="next" title="Next" onclick="scrollToElement('.featurette1', 'benefit2', ['benefit1', 'benefit2', 'benefit3']);">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</button>
 				</div>
 			</div>
-
-			<hr class="featurette-divider">
-
-			<div class="row featurette">
+			<div id="benefit2" class="row featurette1">
+				<div class="col-md-7">
+					<h2 class="featurette-heading"><img src="images\check.png" alt="" width="10%">Less Fare. <span class="text-muted">More Savings. </span></h2>
+					<p class="lead">
+						JuanDirection will give you ONE WAY OR ANOTHER which can help you choose the cheapest way. An estimated fare for your journey is 
+						provided together with the estimated commuting time.
+					</p>					
+				</div>
 				<div class="col-md-5">
-					<img src="images\bia.jpg" alt="Generic placeholder image" height="200px">
+					<img src="images\benefit.jpg" alt="Generic placeholder image" width="80%">
+					<button id="next" title="Next" onclick="scrollToElement('.featurette1', 'benefit3', ['benefit1', 'benefit2', 'benefit3']);">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</button>
+				</div>
+			</div>
+			<div id="benefit3" class="row featurette1">
+				<div class="col-md-7">
+					<h2 class="featurette-heading"><img src="images\check.png" alt="" width="10%">Less Confusions. <span class="text-muted">More Efficient. </span></h2>
+					<p class="lead">
+						JuanDirection will help you enjoy the BEST SONG EVER while commuting. The detailed and comprehensive directions are what we will 
+						provide. So worry no more cause will guide you to the Metro.
+					</p>									
+				</div>
+				<div class="col-md-5">
+					<img src="images\benefit.jpg" alt="Generic placeholder image" width="80%">
+					<button id="next" title="Next" onclick="scrollToElement('.featurette1', 'benefit1', ['benefit1', 'benefit2', 'benefit3']);">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</button>
+				</div>
+			</div>
+			<div id="who">
+				<h2> WHO ARE WE? </h2>
+				<p class="lead">
+					We are a group of junior undergraduate students from De La Salle University-Manila taking up Bachelor of Science in Computer Science 
+					with Specialization in Software Technology.
+					Our current goal is to pinpoint a problem in our society and try to solve it by creating a web application.
+					The members of our group are as follows:</p>
+				<div id="fadein">
+					<button id="down" title="More Details" onclick="scrollToElement('.featurette2', 'bia', ['bia', 'pau', 'kev', 'zem']);"><img src="images\bia.jpg"></img></button>
+					<button id="down" title="More Details" onclick="scrollToElement('.featurette2', 'pau', ['bia', 'pau', 'kev', 'zem']);"><img src="images\pau.jpg"></img></button>
+					<button id="down" title="More Details" onclick="scrollToElement('.featurette2', 'kev', ['bia', 'pau', 'kev', 'zem']);"><img src="images\kevin.jpg"></img></button>
+					<button id="down" title="More Details" onclick="scrollToElement('.featurette2', 'zem', ['bia', 'pau', 'kev', 'zem']);"><img src="images\zem.jpg"></img></button>
+				</div>
+			</div>
+			<div id="bia" class="row featurette2">
+				<div class="col-md-5">
+					<img src="images\bia.jpg" alt="Generic placeholder image" width="50%">
 				</div>
 				<div class="col-md-7">
 					<h2 class="featurette-heading">Adolfo, Bianca Trish. <span class="text-muted">Back-end Developer.</span></h2>
-					<p class="lead"></p>
+					<p class="lead">
+						11105305 </br>
+						bianca_adolfo@dlsu.ph </br>
+						 </br>
+						Research Interests: Natural Language Processing, Cloud Computing </br>
+						Likes doing: back-end processes </br>
+						Dislikes doing: graphical user interfaces </br>
+						Follow me on Twitter: @taishi_lo </br>
+					</p>
 				</div>
 			</div>
-
-			<hr class="featurette-divider">
-
-			<div class="row featurette">
-				<div class="col-md-7">
-					<h2 class="featurette-heading">Talens, John Zem. <span class="text-muted">Back-end Developer.</span></h2>
-					<p class="lead"></p>
-				</div>
-				<div class="col-md-5">
-					<img src="images\zem.jpg" alt="Generic placeholder image" height="200px">
-				</div>
-			</div>
-
-			<hr class="featurette-divider">
-
-			<div class="row featurette">
-				<div class="col-md-5">
-					<img src="images\pau.jpg" alt="Generic placeholder image" height="200px">
-				</div>
+			<div id="pau" class="row featurette2">
 				<div class="col-md-7">
 					<h2 class="featurette-heading">Rivera, Joanna Pauline. <span class="text-muted">Front-end Developer.</span></h2>
-					<p class="lead"></p>
+					<p class="lead">
+						11126558 </br>
+						joanna_rivera@dlsu.edu.ph </br>
+						 </br>
+						Research Interests: Natural Language Processing, Artificial Intelligence, 3D Modelling, Music, Architecture </br>
+						Likes doing: graphical user interfaces, controllers & model (MVC) </br>
+						Dislikes doing: documentation </br>
+						Follow me on Twitter: @iAmJohannaaaa </br>
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img src="images\pau.jpg" alt="Generic placeholder image" width="50%">
 				</div>
 			</div>
-		  
-			<hr class="featurette-divider">		
-		</div>
-		
-		<footer>
-			<div class="container">
-				<p class="pull-right"><a href="#">Back to top</a></p>
-				<p>&copy; 2014 JuanDirection, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			<div id="kev" class="row featurette2">
+				<div class="col-md-5">
+					<img src="images\kevin.jpg" alt="Generic placeholder image" width="50%">
+				</div>
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Rivera, Kevin. <span class="text-muted">Project Manager.</span></h2>
+					<p class="lead">
+						11136448 </br>
+						kevinrivera427@gmail.com </br>
+						 </br>
+						Research Interests: Natural Language Processing </br>
+						Likes doing: Learning new programming languages </br>
+						Dislikes doing: Documentation </br>
+						Follow me on Twitter: @KevinLikesCake </br>
+					</p>
+				</div>
 			</div>
-		</footer>
-	
+			<div id="zem" class="row featurette2">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Talens, John Zem. <span class="text-muted">Back-end Developer.</span></h2>
+					<p class="lead">
+						11121734 </br>
+						john_zem_talens@dlsu.ph </br>
+						 </br>
+						Research Interests: Natural Language Processing, Bioinformatics </br>
+						Likes doing: back-end processes </br>
+						Dislikes doing:  graphical user interfaces </br>
+						Follow me on Twitter: @invaderZEM_ </br>
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img src="images\zem.jpg" alt="Generic placeholder image" width="50%">
+				</div>
+			</div>
+			<div id="power">
+				<h2>POWERED BY:</h2>
+				<img src="images/dotc.png" alt="" width="33%"></img>
+				<img src="images/otp.png" alt="" width="33%"></img>
+				<img src="images/bootstrap.png" alt="" width="33%"></img>
+			</div>
+			<footer>
+				<div class="container">
+					<p class="pull-right"><a href="#">Back to top</a></p>
+					<p>&copy; 2014 JuanDirection, Inc. &middot; <a href="http://aspiringdevelopers.wordpress.com/">Follow our Blog</a></p>
+				</div>
+			</footer>		
+		</div>
 		<script src="scripts/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="dist/js/bootstrap.min.js"></script>
-		<script src="../../docs-assets/js/holder.js"></script>
+		<script src="docs-assets/js/holder.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 		<script>
 			var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'));
@@ -118,17 +202,30 @@
 			}
 			
 			inintialize();
-			
+						
 			// using localStorage to store the data in the browser... lasts forever....
 			function storeFromAndTo(){
-			window.location.href = "results.html";
-			localStorage["from"] = document.getElementById("autocomplete").value;
-			localStorage["to"] = document.getElementById("autocomplete2").value;
+				window.location.href = "results.html";
+				localStorage["from"] = document.getElementById("autocomplete").value;
+				localStorage["to"] = document.getElementById("autocomplete2").value;
+			}
 
-		}
+			function scrollToElement(selectorclass, selectorid, featurettes, callback){
+				for (var i=0; i<featurettes.length; i++) {
+					document.getElementById(featurettes[i]).style.display = 'none';
+				}
+				
+				document.getElementById(selectorid).style.display = 'block';			
+				
+				var animation = {scrollTop: $(selectorclass).offset().top};
+				$('html,body').animate(animation, 'slow', 'swing', function() {
+					if (typeof callback == 'function') {
+						callback();
+					}
+					callback = null;
+				});
+			}
 		</script>
-		
-		
 	
     </body>
 </html>

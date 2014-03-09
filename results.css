@@ -48,25 +48,25 @@ body {
     font-weight:bold;
 }
 
-.sideNav .container .directions {
-	background-color: #bdbbbb;
-	
-	position: absolute;
-	left: 5%;
-	right: 5%;
-	top: 10%;
-	bottom: 30%;
-	overflow: auto;
-	
-}
-
 .sideNav .container .total {
 	background-color: #bdbbbb;
 	
 	position: absolute;
 	left: 5%;
 	right: 5%;
-	top: 71%;
+	top: 0;
+	bottom: 60%;
+	overflow: auto;
+	
+}
+
+.sideNav .container .directions {
+	background-color: #bdbbbb;
+	
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 21%;
 	overflow: auto;
 	
 }
@@ -81,9 +81,10 @@ body {
 }
 
 .map .thumb_up {
-	background: no-repeat url(images/lights3.png) 0 0;
-	width: 125px;
-	height: 207px;
+	background: no-repeat url(images/traffic.png) 0 0;
+	background-size: 100% 100%;
+	width: 7%;
+	height: 20%;
 	border: 0;
 	position: absolute;
 	bottom: 0;
