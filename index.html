@@ -1,52 +1,63 @@
+<!--
+   Copyright 2013 Thomas Dy, Philip Cheang under the terms of the
+   MIT license found at http://sakay.ph/LICENSE
+-->
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <title>JuanDirection</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>JuanDirection - We give ways!</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <!--[if IE]>
+    <link rel="stylesheet" href="leaflet/leaflet.ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/screen.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+	
         <!-- Bootstrap core CSS -->
         <link href="dist/css/bootstrap.css" rel="stylesheet">
         
         <!-- Custom styles for this template -->
-        <link href="homepage.css" rel="stylesheet">	
-
-    </head>
-	
-    <body onload="initialize()">
-	
-		<div id="wallpaper"></div>
+        <link href="stylesheets/homepage.css" rel="stylesheet">	
+  </head>
+  <body>
+    
+	<header>
+		<h1 onclick="viewMode('toggle');"><img src="images\juandirection-tagline.png" alt="" width="70%"></img> <i class="icon-home"></i></h1>
 		<div id="rail"></div>
+		<div id="train"></div>
+    </header>
+    <section id="search-container">
 		<div id="horizontalroad"></div>
 		<div id="trafficpost"></div>
-		<div id="train"></div>
 		<div id="jeepney"></div>
 		<div id="bus"></div>
-		<div id="time"></div>
-		<div id="money"></div>
-		<div id="direction"></div>
-		<div id="head">
-			<div class="container">
-				<div class="form-group">
-					<img src="images\juandirection-tagline.png" alt="" width="100%"></img>
-				</div>
-				<form class="form-fromto" role="form">
-					<input type="text" class="form-control" id="autocomplete" placeholder="From" required autofocus></input>
-					<input type="text" class="form-control" id="autocomplete2" placeholder="To" required></input>
-					
-					<button class="thumb_up" title="Search" type="button" onclick = "storeFromAndTo()"></button>
-				</form>
-			</div>
-		</div>
-		<div id="details">
-			<div id="description">
+      <div class="container">
+	  <div id="search" class="landinginfo">
+      </div>
+      </div>
+    </section>
+    <section id="do-things">
+      <div class="container">        
+      </div>
+    </section>
+    <div id="map-container">
+      <div id="map">
+      </div>      
+    </div>
+    <div id="sidebar">
+      <div id="routes"></div>
+      <div id="itinerary"></div>
+    </div>
+    <div id="home">
+      <section id="details">
+      <div id="description">
 				<div class="container">
-					<h2 class="featurette-heading"> We give ways! </br>
-						JuanDirection is a web application that will give you directions for commuting in the Metro.</br>
-						We will give you ways that might keep you in time.</br>
-						We will give you ways wherein you might save money.</br>
-						We will give you ways to help you prevent getting lost.</br>
-					</h2>
+					<h1> We give you <strong>clear</strong> routes for commuting in the Metro </br>
+						while you might save <strong>money</strong> and/or <strong>time</strong>. </br>
+					</h1>
 				</div>
 			</div>
 			<div id="benefit1" class="row featurette1">
@@ -182,50 +193,306 @@
 				<img src="images/otp.png" alt="" width="33%"></img>
 				<img src="images/bootstrap.png" alt="" width="33%"></img>
 			</div>
-			<footer>
-				<div class="container">
-					<p class="pull-right"><a href="#">Back to top</a></p>
-					<p>&copy; 2014 JuanDirection, Inc. &middot; <a href="http://aspiringdevelopers.wordpress.com/">Follow our Blog</a></p>
-				</div>
-			</footer>		
-		</div>
-		<script src="scripts/jquery-1.11.0.min.js" type="text/javascript"></script>
-		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="dist/js/bootstrap.min.js"></script>
-		<script src="docs-assets/js/holder.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-		<script>
-			var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'));
-			var autocomplete2 = new google.maps.places.Autocomplete(document.getElementById('autocomplete2'));
+		  <footer>
+			<div class="container">
+						<p class="pull-right"><a href="#">Back to top</a></p>
+						<p>&copy; 2014 JuanDirection, Inc. &middot; <a href="http://aspiringdevelopers.wordpress.com/">Follow our Blog</a></p>
+					</div>
+		  </footer>
+		</section>
+    </div>
+    <div id="print"></div>
+    <div id="progress"></div>
+    <div id="temp-load">
+      loading…
+    </div>
+    <script type="ractive" id="searchTemplate">
+      <div>
+        <input type="text" id="from" placeholder="Starting Point">
+        <input type="text" id="to" placeholder="Destination">
+        <button id="swap" proxy-tap="swap"><img src="img/swap.svg" alt="Swap Origin and Destination">
+        </button>
+        <button id="get-route" proxy-tap="go"></button>
+        <h1 class="view-toggle" onclick="viewMode('map');">
+          Go to MAP
+        </h1>
+      </div>
+      <div class="fix-later">
+        <label for="mode">Mode:</label>
+        <select id="mode" name="{{mode}}">
+          <option value="TRANSIT,WALK">Transit</option>
+          <option value="WALK">Walk Only</option>
+          <option value="BICYCLE">Bike Only</option>
+        </select>
+      </div>
+    </script>
 
-			function initialize() {
-			}
-			
-			inintialize();
-						
-			// using localStorage to store the data in the browser... lasts forever....
-			function storeFromAndTo(){
-				window.location.href = "results.html";
-				localStorage["from"] = document.getElementById("autocomplete").value;
-				localStorage["to"] = document.getElementById("autocomplete2").value;
-			}
+    <script type="ractive" id="routerTemplate">
+      <h3>routes</h3>
+      <ul class="icons-ul">
+      {{#results:num}}
+        <li
+            class="{{(num == selected ? 'selected' : '')}}"
+            proxy-tap="select:{{num}}"
+            proxy-hover="hover:{{num}}"><i class="icon-li {{(num == selected ? 'icon-check-sign' : 'icon-check-empty')}}"></i>
+          {{#legs}}
+            {{#(mode == 'RAIL')}}
+              <span class="badge badge-{{(route)}}">{{route}}</span>
+            {{/()}}
+            {{^(mode == 'RAIL')}}
+              <span class="badge badge-{{(mode)}}">{{mode}}</span>
+            {{/()}}
+          {{/legs}}
+          <br>
+          <span class="info">
+           {{(f(duration))}}{{#fare}} — (P{{fare}}){{/fare}}
+          </span>
+        </li>
+      {{/results}}
+      {{^results}}
+        <li><i class="icon-li icon-remove"></i>No results</li>
+      {{/results}}
+      </ul>
+    </script>
 
-			function scrollToElement(selectorclass, selectorid, featurettes, callback){
-				for (var i=0; i<featurettes.length; i++) {
-					document.getElementById(featurettes[i]).style.display = 'none';
-				}
-				
-				document.getElementById(selectorid).style.display = 'block';			
-				
-				var animation = {scrollTop: $(selectorclass).offset().top};
-				$('html,body').animate(animation, 'slow', 'swing', function() {
-					if (typeof callback == 'function') {
-						callback();
-					}
-					callback = null;
-				});
-			}
-		</script>
-	
-    </body>
+    <script type="ractive" id="printTemplate">
+      <h3>sakay.ph</h3>
+      {{#results:n}}
+      {{#(divLoaded(n, selected))}}
+      <ol class="{{(divClass(n, selected))}}">
+      {{#legs:i}}
+      <li class="step-container">
+        <div class="step {{className}}">
+          <img src="{{(map(.))}}">
+        {{#(mode == "WALK")}}
+            <div class="metadata">
+              <div class="mode">
+                {{mode}}
+              </div>
+              <div class="duration">
+                {{(f(duration))}}
+              </div>
+            </div>
+              <figure class="dot"></figure>
+              <figure class="line"></figure>
+            <div class="body">
+              <div class="main">
+                {{from.name}} <strong>to</strong> {{to.name}}
+              </div>
+                <ul>
+                  {{#steps}}
+                    <li><strong>{{( formatDirection(relativeDirection) )}}</strong> on to {{streetName}}</li>
+                  {{/steps}}
+                </ul>
+            </div>
+        {{/()}}
+
+        {{#(mode == "RAIL")}}
+            <div class="metadata">
+              <div class="mode">
+                {{route}}
+              </div>
+              <div class="duration">
+                {{(f(duration))}}{{#fare}}<br> P{{fare}}{{/fare}}
+              </div>
+            </div>
+              <figure class="dot"></figure>
+              <figure class="line"></figure>
+            <div class="body">
+              <div class="main">
+                {{from.name}} <strong>to</strong> {{to.name}}
+              </div>
+            </div>
+        {{/()}}
+
+        {{#(mode == "BUS" || mode == "JEEP")}}
+            <div class="metadata">
+              <div class="mode">
+                {{mode}}
+              </div>
+              <div class="duration">
+                {{(f(duration))}}{{#fare}}<br> P{{fare}}{{/fare}}
+              </div>
+            </div>
+              <figure class="dot"></figure>
+              <figure class="line"></figure>
+            <div class="body">
+              <div class="main">
+                {{route}}
+              </div>
+                <ul>
+                  <li><strong>board</strong> {{from.name}}</li>
+                  <li><strong>alight</strong> {{to.name}}</li>
+                </ul>
+            </div>
+        {{/()}}
+        </div>
+      </li>
+      {{/legs}}
+      </ol>
+      {{/()}}
+      {{/results}}
+
+    </script>
+
+    <script type="ractive" id="itineraryTemplate">
+      <h3>directions</h3>
+      <button id="sms-button" proxy-tap="sendSMS"><i class="icon-envelope"></i> Text me</button>
+      <button id="print-button" proxy-tap="print"><i class="icon-print"></i> Print</button>
+      {{#current}}
+      <ol>
+      {{#legs:i}}
+      <li class="step-container">
+        <div class="step {{className}}" proxy-tap="showSteps" proxy-hover="hover:{{i}}">
+        {{#(mode == "WALK")}}
+            <div class="metadata">
+              <div class="mode">
+                {{mode}}
+              </div>
+              <div class="duration">
+                {{(f(duration))}}
+              </div>
+            </div>
+              <figure class="dot"></figure>
+              <figure class="line"></figure>
+            <div class="body">
+              <div class="main">
+                {{from.name}} <strong>to</strong> {{to.name}}
+              </div>
+              {{#.showSteps}}
+                <ul>
+                  {{#steps}}
+                    <li><strong>{{( formatDirection(relativeDirection) )}}</strong> on to {{streetName}}</li>
+                  {{/steps}}
+                </ul>
+              {{/.showSteps}}
+            </div>
+        {{/()}}
+
+        {{#(mode == "RAIL")}}
+            <div class="metadata">
+              <div class="mode">
+                {{route}}
+              </div>
+              <div class="duration">
+                {{(f(duration))}}{{#fare}}<br> P{{fare}}{{/fare}}
+              </div>
+            </div>
+              <figure class="dot"></figure>
+              <figure class="line"></figure>
+            <div class="body">
+              <div class="main">
+                {{from.name}} <strong>to</strong> {{to.name}}
+              </div>
+            </div>
+        {{/()}}
+
+        {{#(mode == "BUS" || mode == "JEEP")}}
+            <div class="metadata">
+              <div class="mode">
+                {{mode}}
+              </div>
+              <div class="duration">
+                {{(f(duration))}}{{#fare}}<br> P{{fare}}{{/fare}}
+              </div>
+            </div>
+              <figure class="dot"></figure>
+              <figure class="line"></figure>
+            <div class="body">
+              <div class="main">
+                {{route}}
+              </div>
+              {{#.showSteps}}
+                <ul>
+                  <li><strong>board</strong> {{from.name}}</li>
+                  <li><strong>alight</strong> {{to.name}}</li>
+                </ul>
+              {{/.showSteps}}
+            </div>
+        {{/()}}
+        </div>
+      </li>
+      {{/legs}}
+      </ol>
+      {{/current}}
+    </script>
+
+    <script type="ractive" id="popupTemplate">
+      <p>{{address}}</p>
+      <button proxy-tap="setStart">Set as starting point</button>
+      <button proxy-tap="setEnd">Set as destination</button>
+      <p>{{latlng.lat}},{{latlng.lng}}</p>
+    </script>
+
+    <script type="ractive" id="modalTemplate">
+      <input type="text" value="{{number}}" placeholder="Number">
+      {{^sending}}
+      <button proxy-tap="send">Send</button>
+      {{/sending}}
+      {{#sending}}
+      Sending...
+      {{/sending}}
+    </script>
+
+    <script type="ractive" id="progressWidgetTemplate">
+      {{#loading}}
+        <style>
+          body {
+            opacity: 0.8;
+          }
+          #map {
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+          }
+          #temp-load {
+            display:block;
+            -webkit-transition: all 0.8s;
+            transition: all 0.8s;
+            opacity: 1;
+            -webkit-filter: blur(0);
+            filter: blur(0);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+        </style>
+
+      {{/loading}}
+    </script>
+
+    <script type="template" id="trackingInfo">
+      <p class="tracking">We collect searches (origin + destination) and timestamps. This is to improve the service, and hopefully to also help the transit agencies understand how people travel. (better trains?)
+
+      <p class="tracking no">We *don’t* collect any personally identifiable information like IP addresses, your location, fingerprints, or favorite spice girl, ’cause that’d be evil and creepy.
+
+      <p class="tracking opt">If you’re a paranoid android, you can opt out here. Don’t believe us? <a href="https://github.com/ahelpingchip/sakayph">Hit us on Github</a>.
+
+    </script>
+
+    <script type="ractive" id="trackWidgetTemplate">
+      <p class="tracking check"><label><input type="checkbox" checked="{{disallowTracking}}"> Opt-out of logging</label>
+    </script>
+
+    <script type="text/javascript">
+      (function() {
+        var config = {
+          kitId: 'sek3kre',
+          scriptTimeout: 3000
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
+	<script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script src="js/reqwest.min.js"></script>
+    <script src="js/q.min.js"></script>
+    <script src="js/Ractive.min.js"></script>
+    <script src="js/picoModal-1.0.0.min.js"></script>
+    <script src="js/native.history.js"></script>
+    <script src="http://maps.google.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyBLP-naDBEFyAjrnvuzq-EWKAOC_MhN3Bc"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="leaflet/google.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/fare.js"></script>
+    <script src="js/ws.js"></script>
+    <script src="js/map.js"></script>
+  </body>
 </html>
