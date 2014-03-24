@@ -29,8 +29,15 @@ var search = new Ractive({
 });
 
 search.addInput = function(id, target) {
+var defaultBounds = new google.maps.LatLngBounds(
+  new google.maps.LatLng(14.740537407131162,120.92651367187499),
+  new google.maps.LatLng(14.37153239246733,121.05148315429686));
+
   var input = document.getElementById(id);
-  var searchBox = new google.maps.places.SearchBox(input);
+  
+  var searchBox = new google.maps.places.SearchBox(input, {
+  bounds: defaultBounds
+});
   var select = function() {
     var places = searchBox.getPlaces();
     var options = {};
