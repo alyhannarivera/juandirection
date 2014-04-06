@@ -1,0 +1,119 @@
+body {
+	behavior: url("../js/sscontrol.htc");
+}
+
+.container
+	{width:100%;
+	padding:0 6px}
+
+	header
+	{height:270px}
+
+	header h1
+	{width: 70%;
+	top:18%;
+	left: 15%;}
+
+	section h3
+	{font-size:24px}
+
+	#search .view-toggle
+	{display:none}
+
+	#search input[type="text"]
+	{-webkit-transition:none;
+	-moz-transition:none;
+	-o-transition:none;
+	transition:none;
+	width:-webkit-calc(100% - 20px);
+	width:calc(100% - 20px)}
+	
+	body.mapmode #search, body.mapmode #search-container
+	{display:none;}
+	
+	body.mapmode header
+	{height:70px;
+	margin:0;
+	padding: 0;}
+	
+	body.mapmode header h1
+	{position:absolute;
+	width: 100%;
+	height: 90%;
+	top:5%;
+	left: 1%;
+	margin:0;
+	padding: 0;
+	text-align: left;}
+	
+	body.mapmode header h1 img
+	{width: 40%;
+	left: 0;}
+	
+	body.mapmode #sidebar
+	{width: 100%;}
+
+	body.mapmode #map-container
+	{display: none;
+	width: 100%;
+	left:0;}
+	
+	body.mapmode #showmap{
+	display: block;
+	visibility: visible}
+	
+	#horizontalroad {
+		bottom: 33.2%;
+	}
+
+	#bus {
+		bottom: 34.7%;
+	}
+	
+	#jeepney {
+		bottom: 37.7%;
+	}
+	
+	#trafficpost {
+		bottom: 38.7%;
+	}
+	
+	#details {
+		top: 100%;
+	}
+	
+	.marketing2 .col-lg-4 {
+		text-align: center;
+		width: 100%;
+	}
+	
+	.marketing1 img {
+		display: none;
+	}#horizontalroad {
+		bottom: 33.2%;
+	}
+
+	#bus {
+		bottom: 34.7%;
+	}
+	
+	#jeepney {
+		bottom: 37.7%;
+	}
+	
+	#trafficpost {
+		bottom: 38.7%;
+	}
+	
+	#details {
+		top: 100%;
+	}
+	
+	.marketing2 .col-lg-4 {
+		text-align: center;
+		width: 100%;
+	}
+	
+	.marketing1 img {
+		display: none;
+	}

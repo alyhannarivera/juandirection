@@ -2,7 +2,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 {margin:0;
 padding:0;
 border:0;
-font:inherit;
+font-family:Century Gothic,arial,sans-serif;
 font-size:100%;
 vertical-align:baseline}
 
@@ -41,7 +41,8 @@ strong
 {display:none}
 
 #print
-{font-family:"Museo Sans",museo-sans,sans-serif;
+{
+font-family:Century Gothic,arial,sans-serif;
 display:block;
 width:960px}
 
@@ -49,7 +50,8 @@ width:960px}
 {display:none}
 
 h3
-{font-family:"Museo Slab",museo-slab,sans-serif;
+{
+font-family:Century Gothic,arial,sans-serif;
 font-size:28px;
 margin-bottom:18px;
 color:#702d16}

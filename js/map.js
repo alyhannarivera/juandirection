@@ -10,6 +10,46 @@ var fitPadding = { paddingTopLeft: [300, 10], paddingBottomRight: [10, 10] };
 
 var historyInitialized = false;
 
+// Traffic
+
+ var myRoutes = new Array();
+ 
+ $(function() { 
+			$.ajax({
+				url: 'sample.xml',
+				dataType:'xml',
+				type:'GET',
+				success:function(xml) {
+					var i = 0;
+					$(xml).find('item').each(function() {
+						var title = $(this).find("title").text(); 
+						var des = $(this).find("description").text();
+						var link = $(this).find("link").text();
+						var $des = $('<div class="linkitem"></div>').html(des);
+						var $link = $('<a></a>').attr('href',link).attr('target','_blank').html(title);
+						var pubDate = new Date($(this).find("pubDate").text()); 
+						var day = pubDate.getDate();
+						var month = pubDate.getMonth() + 1;
+						var year = pubDate.getFullYear();
+						var date = day + '/' + month + '/' + year;
+						var $date = $('<div class="date"></div>').text(date)	
+						var wrapper = "<li class='single-feed'>";
+						
+						var bound = $(this).find("bound").text();
+						
+						myRoute = new Array(title, des, bound);
+						myRoutes.push(myRoute);
+						i++;
+					})
+
+				},
+				error:function() {
+					alert("I am sorry, But I can't fetch that feed");
+				}
+
+			});
+});
+
 var progress = new Ractive({
   el: '#progress',
   template: '#progressWidgetTemplate'
@@ -29,15 +69,8 @@ var search = new Ractive({
 });
 
 search.addInput = function(id, target) {
-var defaultBounds = new google.maps.LatLngBounds(
-  new google.maps.LatLng(14.740537407131162,120.92651367187499),
-  new google.maps.LatLng(14.37153239246733,121.05148315429686));
-
   var input = document.getElementById(id);
-  
-  var searchBox = new google.maps.places.SearchBox(input, {
-  bounds: defaultBounds
-});
+  var searchBox = new google.maps.places.SearchBox(input);
   var select = function() {
     var places = searchBox.getPlaces();
     var options = {};
@@ -373,6 +406,10 @@ var itinerary = new Ractive({
     isTransit: function(mode) {
       return mode == 'JEEP' || mode == 'BUS' || mode == 'RAIL';
     },
+	formatTraffic: function(fromRoute, toRoute) {
+	
+		return 'traffic';
+	}
   }
 });
 itinerary.markerLayer = L.layerGroup([]).addTo(map);
