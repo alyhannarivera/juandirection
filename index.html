@@ -402,6 +402,9 @@
               <div class="main">
                 {{route}}
               </div>
+			  <div class="traffic">
+					{{ (formatTraffic(from.name, to.name)) }}
+			  </div>
               {{#.showSteps}}
                 <ul>
                   <li><strong>board</strong> {{from.name}}</li>
