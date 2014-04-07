@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="stylesheets/homepage.css"/>	
 	</head>
 	
+	
 	<body>
 		<header>
 			<h1 onclick="viewMode('toggle');"></h1>
@@ -345,7 +346,7 @@
 				<div class="body">
 				  <div class="main">
 					{{mode}} to <strong>{{route}}</strong>
-				  <div class="traffic">
+				  <div class="traffic" style="color:black">
 						{{ (formatTraffic(from.name, to.name)) }}
 				  </div>
 				  <div class="duration">
@@ -368,13 +369,22 @@
 		  {{/current}}
 		</script>
 
+		
 		<script type="ractive" id="popupTemplate">
 			<p>{{address}}</p>
 			<button proxy-tap="setStart">Set as starting point</button>
 			<button proxy-tap="setEnd">Set as destination</button>
 			<p>{{latlng.lat}},{{latlng.lng}}</p>
 		</script>
-
+<script type="ractive" id="modalTemplate">
+			<input type="text" value="{{number}}" placeholder="Number">
+			{{^sending}}
+			<button proxy-tap="send">Send</button>
+			{{/sending}}
+			{{#sending}}
+			Sending...
+			{{/sending}}
+		</script>
 		<script type="ractive" id="progressWidgetTemplate">
 			{{#loading}}
 			<style>

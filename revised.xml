@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Interaksyon | TV5-MMDA Traffic Monitoring System</title><atom:link href="http://mmdatraffic.interaksyon.com/livefeed" rel="self" /> <link>http://mmdatraffic.interaksyon.com/</link><description></description><language>en-us</language><pubDate>Mon, 31 Mar 2014 18:57:55 +0800</pubDate><lastBuildDate>Mon, 31 Mar 2014 18:57:55 +0800</lastBuildDate>
+
+<!--Roxas Blvd-->
+<item>
+	<title>Anda Circle</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.590439321468065</lat>
+	<lng>120.97107052803038</lng>
+</item>
+<item>
+	<title>Finance Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.582800498040996</lat>
+	<lng>120.97550153732298</lng>
+</item>
+<item>
+	<title>U.N. Avenue</title>
+	<northbound>M</northbound>
+	<southbound>H</southbound>
+	<lat>14.578771777886091</lat>
+	<lng>120.97784042358397</lng>
+</item>
+<item>
+	<title>Pedro Gil</title>
+	<northbound>M</northbound>
+	<southbound>H</southbound>
+	<lat>14.57297776767191</lat>
+	<lng>120.98095178604127</lng>
+</item>
+<item>
+	<title>Rajah Sulayman</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.568512745481234</lat>
+	<lng>120.98305463790894</lng>
+</item>
+<item>
+	<title>Quirino</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.564255314518924</lat>
+	<lng>120.98496437072752</lng>
+</item>
+<item>
+	<title>Pablo Ocampo</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.559520124026692</lat>
+	<lng>120.98713159561157</lng>
+</item>
+<item>
+	<title>Buendia</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.552209454911205</lat>
+	<lng>120.98949193954469</lng>
+</item>
+<item>
+	<title>Edsa Extension</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.53694349875279</lat>
+	<lng>120.99249601364136</lng>
+</item>
+<item>
+	<title>Baclaran</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.531252246501996</lat>
+	<lng>120.9932255744934</lng>
+</item>
+<item>
+	<title>Airport Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.527201813492443</lat>
+	<lng>120.99356889724731</lng>
+</item>
+<item>
+	<title>Coastal Road</title>
+	<northbound>H</northbound>
+	<southbound>H</southbound>
+	<lat>14.504434922883336</lat>
+	<lng>120.99054336547852</lng>
+</item>
+<!--EDSA-->
+<item>
+	<title>Mall of Asia</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.535288000768249</lat>
+	<lng>120.98590850830078</lng>
+</item>
+<item>
+	<title>Macapagal Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.536160376080508</lat>
+	<lng>120.98925590515137</lng>
+</item>
+<item>
+	<title>Roxas Blvd</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.537148122764927</lat>
+	<lng>120.99244236946106</lng>
+</item>
+<item>
+	<title>Roxas Boulevard</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.537148122764927</lat>
+	<lng>120.99244236946106</lng>
+</item>
+<item>
+	<title>Harrison</title>
+	<northbound>L</northbound>
+	<southbound>L</southbound>
+	<lat>14.537200049526131</lat>
+	<lng>120.99295735359193</lng>
+</item>
+<item>
+	<title>Taft Ave</title>
+	<northbound>H</northbound>
+	<southbound>H</southbound>
+	<lat>14.537573921846493</lat>
+	<lng>121.00063920021056</lng>
+</item>
+<item>
+	<title>Tramo</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.537875096311145</lat>
+	<lng>121.00320339202881</lng>
+</item>
+<item>
+	<title>Malibay</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.538799387794532</lat>
+	<lng>121.0104238986969</lng>
+</item>
+<item>
+	<title>Mgallanes</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.540461025680335</lat>
+	<lng>121.01683974266051</lng>
+</item>
+<item>
+	<title>Arnaiz - Pasay Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.547502077507172</lat>
+	<lng>121.02957487106325</lng>
+</item>
+<item>
+	<title>Ayala Ave</title>
+	<northbound>H</northbound>
+	<southbound>H</southbound>
+	<lat>14.550524053014742</lat>
+	<lng>121.02957487106325</lng>
+</item>
+<item>
+	<title>Edsa Buendia</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.55483367160057</lat>
+	<lng>121.03466033935547</lng>
+</item>
+<item>
+	<title>Kalayaan - Estrella</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.559849338578047</lat>
+	<lng>121.04049682617188</lng>
+</item>
+<item>
+	<title>Orense</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.561656196879305</lat>
+	<lng>121.04269623756407</lng>
+</item>
+<item>
+	<title>Guadalupe</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.566734012505211</lat>
+	<lng>121.0452926158905</lng>
+</item>
+<item>
+	<title>Pioneer - Boni</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.572507203173819</lat>
+	<lng>121.04719161987305</lng>
+</item>
+<item>
+	<title>Reliance</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.576681623142214</lat>
+	<lng>121.05027079582213</lng>
+</item>
+<item>
+	<title>Shaw Blvd</title>
+	<northbound>M</northbound>
+	<southbound>H</southbound>
+	<lat>14.581281462445244</lat>
+	<lng>121.05357527732848</lng>
+</item>
+<item>
+	<title>Shaw Boulevard</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.581281462445244</lat>
+	<lng>121.05357527732848</lng>
+</item>
+<item>
+	<title>SM Megamall</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.58629652766152</lat>
+	<lng>121.05603218078612</lng>
+</item>
+<item>
+	<title>Ortigas Ave</title>
+	<northbound>M</northbound>
+	<southbound>H</southbound>
+	<lat>14.592754683539896</lat>
+	<lng>121.05829596519469</lng>
+</item>
+<item>
+	<title>White Plains - Connecticut</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.599617564313828</lat>
+	<lng>121.05983018875123</lng>
+</item>
+<item>
+	<title>Santolan</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.610861428076937</lat>
+	<lng>121.05504512786865</lng>
+</item>
+<item>
+	<title>Main Ave</title>
+	<northbound>L</northbound>
+	<southbound>L</southbound>
+	<lat>14.61411093255264</lat>
+	<lng>121.05359673500061</lng>
+</item>
+<item>
+	<title>P. Tuazon</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.616353374072887</lat>
+	<lng>121.05248093605042</lng>
+</item>
+<item>
+	<title>Mc Arthur - Farmers</title>
+	<northbound>L</northbound>
+	<southbound>L</southbound>
+	<lat>14.61811824250766</lat>
+	<lng>121.05172991752623</lng>
+</item>
+<item>
+	<title>Aurora Blvd</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.62144030933136</lat>
+	<lng>121.05021715164185</lng>
+</item>
+<item>
+	<title>Aurora Boulevard</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.62144030933136</lat>
+	<lng>121.05021715164185</lng>
+</item>
+<item>
+	<title>Monte De Piedad</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.624170595382198</lat>
+	<lng>121.0489296913147</lng>
+</item>
+<item>
+	<title>New York - Nepa Q-Mart</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.625675871653252</lat>
+	<lng>121.04828596115112</lng>
+</item>
+<item>
+	<title>Kamuning</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.630669162483578</lat>
+	<lng>121.04603290557861</lng>
+</item>
+<item>
+	<title>Timog</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.633150194062567</lat>
+	<lng>121.04475617408751</lng>
+</item>
+<item>
+	<title>NIA Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.637157156538452</lat>
+	<lng>121.04223489761353</lng>
+</item>
+<item>
+	<title>Quezon Ave</title>
+	<northbound>M</northbound>
+	<southbound>H</southbound>
+	<lat>14.64724690362709</lat>
+	<lng>121.03564739227294</lng>
+</item>
+<item>
+	<title>Trinoma</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.651305508385851</lat>
+	<lng>121.03311538696288</lng>
+</item>
+<item>
+	<title>North Ave</title>
+	<northbound>M</northbound>
+	<southbound>L</southbound>
+	<lat>14.655945304611098</lat>
+	<lng>121.02909207344057</lng>
+</item>
+<item>
+	<title>Bansalangin</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.656215177877991</lat>
+	<lng>121.02738618850707</lng>
+</item>
+<item>
+	<title>Muñoz</title>
+	<northbound>H</northbound>
+	<southbound>H</southbound>
+	<lat>14.657526102004237</lat>
+	<lng>121.02127075195311</lng>
+</item>
+<item>
+	<title>Kaingin Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.657505342658203</lat>
+	<lng>121.0105848312378</lng>
+</item>
+<item>
+	<title>Balintawak</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.657262393290324</lat>
+	<lng>121.00414752960204</lng>
+</item>
+<!--Ortigas-->
+<item>
+	<title>Santolan</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.607421916703924</lat>
+	<lng>121.03934247046709</lng>
+</item>
+<item>
+	<title>Madison</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.604681040363687</lat>
+	<lng>121.04266840964556</lng>
+</item>
+<item>
+	<title>Roosevelt</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.60333135385387</lat>
+	<lng>121.04436356574297</lng>
+</item>
+<item>
+	<title>Club Filipino</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.601774012972273</lat>
+	<lng>121.04672390967606</lng>
+</item>
+<item>
+	<title>Wilson</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.600798073732479</lat>
+	<lng>121.0477753356099</lng>
+</item>
+<item>
+	<title>Connecticut</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.599510657898618</lat>
+	<lng>121.0497923567891</lng>
+</item>
+<item>
+	<title>La Salle Greenhills</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.595409565296926</lat>
+	<lng>121.05539062991737</lng>
+</item>
+<item>
+	<title>POEA</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.594049439224882</lat>
+	<lng>121.05725744739175</lng>
+</item>
+<item>
+	<title>EDSA Shrine</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.593156527461465</lat>
+	<lng>121.05837324634193</lng>
+</item>
+<item>
+	<title>San Miguel Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.590373941986453</lat>
+	<lng>121.06177428737283</lng>
+</item>
+<item>
+	<title>Meralco Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.588577702082503</lat>
+	<lng>121.06390932574868</lng>
+</item>
+<item>
+	<title>Medical City</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.588868423985964</lat>
+	<lng>121.06928447261451</lng>
+</item>
+<item>
+	<title>Lanuza Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.588993018969918</lat>
+	<lng>121.07126930728556</lng>
+</item>
+<item>
+	<title>Greenmeadows Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.589169528409803</lat>
+	<lng>121.0730073787272</lng>
+</item>
+<item>
+	<title>C5 Flyover</title>
+	<northbound>H</northbound>
+	<southbound>H</southbound>
+	<lat>14.58973020451531</lat>
+	<lng>121.08001330867411</lng>
+</item>
+<!--Espana-->
+<item>
+	<title>Welcome Rotunda</title>
+	<northbound>M</northbound>
+	<southbound>H</southbound>
+	<lat>14.617201583291498</lat>
+	<lng>121.0013623908162</lng>
+</item>
+<item>
+	<title>Bluementritt</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.615291364148371</lat>
+	<lng>120.99919516593219</lng>
+</item>
+<item>
+	<title>A. Maceda</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.61427395804394</lat>
+	<lng>120.99795062094927</lng>
+</item>
+<item>
+	<title>Antipolo</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.612799749004044</lat>
+	<lng>120.99649149924515</lng>
+</item>
+<item>
+	<title>Vicente Cruz</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.611429348632859</lat>
+	<lng>120.99486071616411</lng>
+</item>
+<item>
+	<title>Gov. Forbes - Lacson</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.609498315424863</lat>
+	<lng>120.99277932196854</lng>
+</item>
+<item>
+	<title>P.Noval</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.606425238351727</lat>
+	<lng>120.9894748404622</lng>
+</item>
+<item>
+	<title>Lerma</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.605200148353903</lat>
+	<lng>120.98808009177446</lng>
+</item>
+<!--Quezon Ave-->
+<item>
+	<title>Elliptical Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.649865769766564</lat>
+	<lng>121.04678392410278</lng>
+</item>
+<item>
+	<title>Agham Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.646271166470326</lat>
+	<lng>121.04068994522093</lng>
+</item>
+<item>
+	<title>Bantayog Road</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.64524352370568</lat>
+	<lng>121.03935956954955</lng>
+</item>
+<item>
+	<title>Edsa</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.644309298830818</lat>
+	<lng>121.03754639625548</lng>
+</item>
+<item>
+	<title>SGT. Esguera</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.64283529148932</lat>
+	<lng>121.03546500205994</lng>
+</item>
+<item>
+	<title>Scout Albano</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.64133013292352</lat>
+	<lng>121.0328793525696</lng>
+</item>
+<item>
+	<title>Scout Borromeo</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.639804203005156</lat>
+	<lng>121.03030443191528</lng>
+</item>
+<item>
+	<title>Scout Santiago</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.638205598371066</lat>
+	<lng>121.02771878242491</lng>
+</item>
+<item>
+	<title>Timog</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.637198679082553</lat>
+	<lng>121.02606654167174</lng>
+</item>
+<item>
+	<title>Scout Reyes</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.636523936766974</lat>
+	<lng>121.02514386177064</lng>
+</item>
+<item>
+	<title>Scout Magbanua</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.634946069713301</lat>
+	<lng>121.02253675460815</lng>
+</item>
+<item>
+	<title>Roces Avenue</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.633440857014511</lat>
+	<lng>121.01998329162596</lng>
+</item>
+<item>
+	<title>Roosevelt Avenue</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.632672675519993</lat>
+	<lng>121.01866364479065</lng>
+</item>
+<item>
+	<title>Dr. Garcia Sr.</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.631831825125786</lat>
+	<lng>121.01745128631593</lng>
+</item>
+<item>
+	<title>Scout Chuatoco</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.630534210170792</lat>
+	<lng>121.01565957069397</lng>
+</item>
+<item>
+	<title>Araneta Ave</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.628406105037081</lat>
+	<lng>121.01325631141661</lng>
+</item>
+<item>
+	<title>Sto. Domingo</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.626579032462372</lat>
+	<lng>121.01121783256531</lng>
+</item>
+<item>
+	<title>Biak na Bato</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.625187955647482</lat>
+	<lng>121.00978016853331</lng>
+</item>
+<item>
+	<title>Banawe</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.623547719423987</lat>
+	<lng>121.0079562664032</lng>
+</item>
+<item>
+	<title>Cordillera</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.621803657341824</lat>
+	<lng>121.00607872009276</lng>
+</item>
+<item>
+	<title>D. Tuazon</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.620153014399746</lat>
+	<lng>121.00424408912659</lng>
+</item>
+<item>
+	<title>Speaker Perez</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.619561271456464</lat>
+	<lng>121.0035467147827</lng>
+</item>
+<item>
+	<title>Apo Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.618979908415884</lat>
+	<lng>121.0029137134552</lng>
+</item>
+<item>
+	<title>Kanlaon</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.61828434704208</lat>
+	<lng>121.00225925445555</lng>
+</item>
+<item>
+	<title>Mayon
+</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.617734125290715</lat>
+	<lng>121.00164771080016</lng>
+</item>
+
+<!--C5-->
+<item>
+	<title>Tandang Sora</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.664020599254512</lat>
+	<lng>121.06858491897583</lng>
+</item>
+<item>
+	<title>Capitol Hills</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.663148730881005</lat>
+	<lng>121.07424974441527</lng>
+</item>
+<item>
+	<title>University of the Philippines</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.654720490991073</lat>
+	<lng>121.07422828674316</lng>
+</item>
+<item>
+	<title>C.P. Garcia</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.648212256327488</lat>
+	<lng>121.07429265975954</lng>
+</item>
+<item>
+	<title>Miriam College</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.64238893519906</lat>
+	<lng>121.07460379600523</lng>
+</item>
+<item>
+	<title>Ateneo De Manila University</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.638754227948638</lat>
+	<lng>121.07457160949706</lng>
+</item>
+<item>
+	<title>Xavierville</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.633721138782128</lat>
+	<lng>121.07428193092345
+	</lng>
+</item>
+<item>
+	<title>Aurora Boulevard</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.6317591588911</lat>
+	<lng>121.07416391372679</lng>
+</item>
+<item>
+	<title>P. Tuazon</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.62349581301439</lat>
+	<lng>121.07423901557921</lng>
+</item>
+<item>
+	<title>Bonny Serrano</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.614578109756634</lat>
+	<lng>121.07056975364685</lng>
+</item>
+<item>
+	<title>Libis Flyover</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.615054126618688</lat>
+	<lng>121.07472717761992</lng>
+</item>
+<item>
+	<title>Eastwood</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.607248504079626</lat>
+	<lng>121.07865929603577</lng>
+</item>
+<item>
+	<title>Green Meadows</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.601392949446007</lat>
+	<lng>121.07928156852721</lng>
+</item>
+<item>
+	<title>Ortigas Ave</title>
+	<northbound>H</northbound>
+	<southbound>H</southbound>
+	<lat>14.589722904054376</lat>
+	<lng>121.07994675636292</lng>
+</item>
+<item>
+	<title>J. Vargas</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.582610517765906</lat>
+	<lng>121.0768675804138</lng>
+</item>
+<item>
+	<title>Lanuza</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.57761613551515</lat>
+	<lng>121.0734450817108</lng>
+</item>
+<item>
+	<title>Bagong Ilog</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.564428761006955</lat>
+	<lng>121.0697865486145</lng>
+</item>
+<item>
+	<title>Kalayaan</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.55630826875606</lat>
+	<lng>121.06308102607726</lng>
+</item>
+<item>
+	<title>Market! Market!</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.549392115144284</lat>
+	<lng>121.05700850486754</lng>
+</item>
+<!--Marcos Highway-->
+<item>
+	<title>SM City Marikina</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.625561678642711</lat>
+	<lng>121.08309030532837</lng>
+</item>
+<item>
+	<title>LRT-2 Station</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.622052809915862</lat>
+	<lng>121.08651280403137</lng>
+</item>
+<item>
+	<title>Dona Juana</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.61922906419312</lat>
+	<lng>121.08936667442322</lng>
+</item>
+<item>
+	<title>Amang Rodriguez</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.618709989338317</lat>
+	<lng>121.09255313873291</lng>
+</item>
+<item>
+	<title>F. Mariano Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.619810426574256</lat>
+	<lng>121.09754204750061</lng>
+</item>
+<item>
+	<title>Robinson's Metro East</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.620298354527922</lat>
+	<lng>121.10005259513855</lng>
+</item>
+<item>
+	<title>San Benildo School</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.621585648607681</lat>
+	<lng>121.10650062561035</lng>
+</item>
+<!--SLEX-->
+<item>
+	<title>Magallanes</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.539579093456478</lat>
+	<lng>121.0169966518879</lng>
+</item>
+<item>
+	<title>Nichols</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.522629733177865</lat>
+	<lng>121.0264380276203</lng>
+</item>
+<item>
+	<title>C5 On-ramp</title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.515982570580215</lat>
+	<lng>121.02987125515936</lng>
+</item>
+<item>
+	<title>Merville </title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.510664696733116</lat>
+	<lng>121.03253200650214</lng>
+</item>
+<item>
+	<title>Bicutan </title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.487148192526032</lat>
+	<lng>121.04506328701972</lng>
+</item>
+<item>
+	<title>Sucat </title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.453738835995352</lat>
+	<lng>121.04549244046211</lng>
+</item>
+<item>
+	<title>Alabang </title>
+	<northbound>M</northbound>
+	<southbound>M</southbound>
+	<lat>14.422651989486482</lat>
+	<lng>121.04557827115057</lng>
+</item>
+<!--Commonwealth-->
+<item>
+	<title>Batasan</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.686821740456566</lat>
+	<lng>121.08702577650547</lng>
+</item>
+<item>
+	<title>Central Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.661621817618794</lat>
+	<lng>121.06496728956698</lng>
+</item>
+<item>
+	<title>Magsaysay Ave</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.657968210734861</lat>
+	<lng>121.05981744825839</lng>
+</item>
+<item>
+	<title>University Ave</title>
+	<northbound>H</northbound>
+	<southbound>M</southbound>
+	<lat>14.656348979103992</lat>
+	<lng>121.05741418898106</lng>
+</item>
+<item>
+	<title>Philcoa</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.653567194259248</lat>
+	<lng>121.05303682386875</lng>
+</item>
+<item>
+	<title>St. Peter's Church</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.681715565561797</lat>
+	<lng>121.08462251722811</lng>
+</item>
+<item>
+	<title>Ever Gotesco</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.677481086189562</lat>
+	<lng>121.08329214155674</lng>
+</item>
+<item>
+	<title>Diliman Preparatory School</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.674672649672177</lat>
+	<lng>121.0815282538533</lng>
+</item>
+<item>
+	<title>Zuzuarregui</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.670749405567541</lat>
+	<lng>121.07822377234696</lng>
+</item>
+<item>
+	<title>General Malvar Hospital</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.666354808634122</lat>
+	<lng>121.07273496687412</lng>
+</item>
+<item>
+	<title>Tandang Sora Eastside</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.663863773484309</lat>
+	<lng>121.06865800917149</lng>
+</item>
+<item>
+	<title>Tandang Sora Westside</title>
+	<northbound>L</northbound>
+	<southbound>M</southbound>
+	<lat>14.663407080632624</lat>
+	<lng>121.06822885572909</lng>
+</item>
+
+
+
+</channel></rss>
